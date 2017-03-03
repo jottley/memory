@@ -1,5 +1,5 @@
 # CORS - Enable Alfresco for CORS
-I did a [Lightning Talk](https://www.slideshare.net/jottley/cors-enable-alfresco-for-cors) at Alfresco Summit in 2013 ([Barcelona](https://summit.alfresco.com/barcelona/sessions)]/[Boston](https://summit.alfresco.com/boston/sessions)) on enabling Alfresco to support [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing). We had implemented this for the initial Salesforce Connector (v1) and there was interest in making the same thing possible for the on-premise platform. 
+I did a [Lightning Talk](https://www.slideshare.net/jottley/cors-enable-alfresco-for-cors) at Alfresco Summit in 2013 ([Barcelona](https://summit.alfresco.com/barcelona/sessions)/[Boston](https://summit.alfresco.com/boston/sessions)) on enabling Alfresco to support [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing). We had implemented this for the initial Salesforce Connector (v1) and there was interest in making the same thing possible for the on-premise platform. 
 
 In Alfresco 5.0, we introduced the config and [library](http://software.dzhuvinov.com/cors-filter.html) as part of the core platform.  It was disabled by default but it was now possible to build Web Applications that could make cross-domain calls without needing to inject additional changes.
   
