@@ -6,9 +6,10 @@ In Alfresco 5.0, we introduced the config and [library](http://software.dzhuvino
 The talk covers the basics of what CORS is and how to enable it  in Alfresco (pre 5.0). The concepts still apply to current versions of Alfresco. The sample code from the demo is in this [project](https://github.com/jottley/memory/tree/master/cors). The demo video is available on [youtube](https://www.youtube.com/watch?v=il1ZlEBqvLU).
 
 [Gethin James](https://twitter.com/covolution) has simplified enabling CORS by providing a [simple module](https://github.com/covolution/enablecors) that can be added to you Alfresco instance. It can be added your projects using maven:
-
-`<dependency>
+```
+<dependency>
   <groupId>org.alfresco</groupId>
   <artifactId>enablecors</artifactId>
   <version>1.0</version>
-</dependency>`
+</dependency>
+```
