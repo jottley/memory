@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>CORS Test</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script src="prettyprint.js"></script>
+		
+</head>
+<body>
+
+<script>
+function make_base_auth(user, password) {
+  var tok = user + ':' + password;
+  var hash = btoa(tok);
+  return "Basic " + hash;
+}	
+	
+var _url = "http://xmpp.alfresco.com:8080/alfresco/service/slingshot/doclib2/node/workspace/SpacesStore/1a0b110f-1e09-4ca2-b367-fe25e4964a4e";
+$.ajax
+  ({
+    type: "GET",
+    url: _url,
+    dataType: 'json',
+    async: false,
+    data: '{}',
+    beforeSend: function (xhr){ 
+         xhr.setRequestHeader('Authorization', make_base_auth("admin", "admin")); 
+    },
+    success: function (response){
+        //alert(JSON.stringify(response));
+        var tbl = prettyPrint( response, {maxDepth: 5, forceObject: true} );
+		document.body.appendChild(tbl);
+        
+        //$("p:first").html(JSON.stringify(response));
+    },
+    failure: function (response) {
+        alert(JSON.stringify(response));
+    }
+});
+
+</script>
+
+</body>
+</head>
