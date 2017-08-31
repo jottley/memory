@@ -1,0 +1,17 @@
+/**
+* Parse Picklist String to create Set
+**/
+
+@TestVisible
+private Set<String> parseString(String selectedValues)
+{
+  Set<String> parsedSet = new Set<String>();
+
+  if(String.isNotBlank(selectedValues))
+  {
+      List<String> values = selectedValues.split(';');
+      parsedSet.addAll(values);
+  }
+
+  return parsedSet;
+}
