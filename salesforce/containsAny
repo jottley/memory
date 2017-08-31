@@ -1,0 +1,20 @@
+/**
+* Compare two sets of strings to see if there is at least one value that matches
+**/
+
+@TestVisible
+private boolean containsAny(Set<String> a, Set<String> b)
+{
+  if (a != null && b != null)
+  {
+      for (String value : a)
+      {
+          if (b.contains(value))
+          {
+              return true;
+          }
+      }
+  }
+
+  return false;
+}
